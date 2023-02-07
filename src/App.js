@@ -1,4 +1,4 @@
-import { BrowserRouter,Switch,Route } from "react-router-dom";
+import { BrowserRouter,Routes,Route } from "react-router-dom";
 import Nevigation from "./component/Nevigation";
 import Home from "./component/page/Home";
 import Member from "./component/page/Member";
@@ -10,11 +10,11 @@ function App() {
     <div>
     <BrowserRouter>
         <Nevigation/>
-        <Switch>
-            <Route path="/" component={Home} exact/>;
-            <Route path="/member" component={Member}/>;
-            <Route path="/product" component={Product}/>;
-        </Switch>
+        <Routes>
+            <Route path="/" element={<Home/>} exact/>;
+            <Route path="/member" element={<Member/>}/>;
+            <Route path="/product" element={<Product/>}/>;
+        </Routes>
     </BrowserRouter>
     </div>
     

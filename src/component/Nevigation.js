@@ -1,4 +1,4 @@
-import { BrowserRouter, Link } from "react-router-dom"
+import { Link } from "react-router-dom"
 import { AiOutlineBars,AiOutlineCloseCircle } from "react-icons/ai";
 import { useState } from "react";
 import './Nevigation.css'
@@ -8,7 +8,6 @@ const Nevigation = ()=>{
     const [showmenu,setShowMenu]=useState(false)
     const toggleMenu=()=>setShowMenu(!showmenu)
     return(
-        <BrowserRouter>
         <aside>
             <div className="navbar">
                 <div className="navbar-toggle" >
@@ -34,7 +33,6 @@ const Nevigation = ()=>{
                     </ul>
                 </nav>
         </aside>
-        </BrowserRouter>
     )
 
 }
